@@ -46,6 +46,11 @@ const Jeto = () => {
         togglePlay();
     }
 
+    const playE3 = () => {
+        setSrc('./AJ_5.mp4');
+        togglePlay();
+    }
+
     useEffect(() => {
         if (!playerState.isPlaying){
             setGridClass('libreriaOpen')
@@ -103,7 +108,7 @@ const Jeto = () => {
                     <img className="casilla" src="./E1.png" alt="E1" />
                     <img className="casilla" src="./E2.png" alt="E2" />
                     <img className="casilla" src="./E3.png" alt="E3" />
-                    <img className="casilla" src="./E4.png" alt="E4" />
+                    <img className="casillaCursor" src="./E4.png" alt="E4" onClick={playE3}/>
                     <img className="casilla" src="./E5.png" alt="E5" />
                     <img className="casilla" src="./E6.png" alt="E6" />
                 </div>
