@@ -1,6 +1,7 @@
 import './jeto.css'
 import React, { useRef, useState, useEffect } from "react";
 import useVideoPlayer from './videoPlayer';
+//What script should be run before every deploy? npm run build
 
 const Jeto = () => {
 
@@ -23,7 +24,7 @@ const Jeto = () => {
     //     }
     // }
 
-    const [videoClass, setVideoClass] = useState('open');
+    const [videoClass, setVideoClass] = useState('closed');
     const [gridClass, setGridClass] = useState ('libreriaOpen')
 
     const playB2 = () => {
@@ -69,8 +70,9 @@ const Jeto = () => {
 
 
     return (
+        <>
+        <img className="titulo" src="./TITULO.png" alt="TIT" />
         <div className="containerBib1">
-            <img className="casilla" src="./TITULO.png" alt="TIT" />
             <video className={videoClass}
                 src={src}
                 ref={videoElement}
@@ -117,6 +119,7 @@ const Jeto = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
